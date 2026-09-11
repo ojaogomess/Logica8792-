@@ -4,14 +4,17 @@
 
 int main () {
 
-   int n;
+  
+  int idade;
 
-   printf("Digite um numero");
-   scanf("%d", &n);
+  printf("Digite a idade: ");
+  scanf("%d", &idade);
 
-    printf("Antecessor: %d\n", n - 1);
-    printf("Sucessor: %d\n", n + 1);
 
-    
+  printf("\n%d anos equivalem a:\n", idade);
+  printf("Equivale a %d meses \n", idade * 12);
+  printf("Equivale a aproximadamente %d dias \n", idade * 365);
+   
+   
     return 0;
 }
