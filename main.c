@@ -15,11 +15,9 @@ int main () {
 
     if(n > 0){
         printf("Positivo\n");
-    }else{
+    }else if(n < 0){
         printf("Negativo\n");
-
     }
-    
 
     return 0;
 }
