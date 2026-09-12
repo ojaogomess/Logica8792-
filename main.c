@@ -4,16 +4,14 @@
 
 int main () {
 
-  
-  float valor, cotacao;
+    float raio;
+    const float PI = 3.14159;
 
-  printf("Digite o valor em reais: ");
-  scanf("%f", &valor);
-  printf("Digite a cotacao do dolar: ");
-  scanf("%f", &cotacao);
+    printf("Digite o raio do circulo: ");
+    scanf("%f", &raio);
+    printf("Area: %.2f\n", PI * raio * raio);
+    printf("Perimetro: %.2f\n", 2 * PI * raio);
 
-  printf("Valor em dolares: %.2f\n", valor / cotacao);
- 
    
     return 0;
 }
