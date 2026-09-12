@@ -4,14 +4,16 @@
 
 int main () {
 
-    float celsius, fahrenheit;
+    int segundos, minutos, horas, resto;
 
-   
-    printf("Digite a temperatura em Celsius: ");
-    scanf("%f", &celsius);
-   
-    fahrenheit = (celsius * 9.0 / 5.0) + 32;
-   printf("Fahrenheit: %.2f\n", fahrenheit);
+    printf("Digite a quantidade em segundos: ");
+    scanf("%d", &segundos);
+
+    horas = segundos / 3600;
+    minutos = (segundos % 3600) / 60;
+    resto = segundos % 60;
+
+    printf("%d horas, %d minutos e %d segundos\n,", horas, minutos, resto);
 
     return 0;
 }
