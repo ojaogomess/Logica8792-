@@ -4,23 +4,17 @@
 
 int main () {
 
-  int idade;
+  int a, b, c, maior;
 
-  printf("Digite uma idade: ");
-  scanf("%d", &idade);
-
-  if(idade >= 50){
-    printf("Voce e um senior");
-  }else if (idade >= 18){
-    printf("voce e maior de idade");
-    }else if (idade >= 12){
-        printf("voce e um adolescente");
-    }else if (idade >= 9){
-        printf("voce e um pre adolscente");
-    }else{
-        printf("voce e uma crianca");
-    }
+    printf("Digite tres numeros: ");
+    scanf("%d %d %d", &a, &b, &c);
  
+    maior = a;
+        
+        if(b > maior) maior = b;
+        if(c > maior) maior = c;
+        
+        printf("maior: %d", maior);
   
   
 
