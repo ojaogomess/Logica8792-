@@ -9,7 +9,11 @@ int main () {
   printf("Digite um numero: ");
   scanf("%d", &n);
 
-printf("%s", n > 0 ? "Positivo" : (n < 0 ?"Negativo" : "Zero"));
+if(n % 2 == 0){
+    printf("\npar");
+}else{
+    printf("\nímpar");
+}
 
     return 0;
 }
