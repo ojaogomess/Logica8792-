@@ -4,12 +4,16 @@
 
 int main () {
 
-  int n;
+  int idade;
 
-  printf("Digite um numero: ");
-  scanf("%d", &n);
+  printf("Digite uma idade: ");
+  scanf("%d", &idade);
 
-printf("%s", n % 2 == 0 ? "\nPar" : "\nimpar");
+  if(idade >= 18){
+    printf("voce e maior de idade");
+  }else{
+    printf("voce e menor de idade");
+  }
 
     return 0;
 }
