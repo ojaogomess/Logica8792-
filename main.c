@@ -4,7 +4,7 @@
 
 int main () {
 
-  int a, b, c, d, e, menor;
+  int a, b, c, d, e, menor, maior;
 
     printf("Digite um numero para a: ");
     scanf("%d", &a);
@@ -30,7 +30,15 @@ int main () {
         if(e < menor) menor = e;
         
         printf("menor: %d", menor);
-  
+    
+     maior = a;
+        
+        if(b > menor) maior = b;
+        if(c > menor) maior = c;
+        if(d > menor) maior = d;
+        if(e > menor) maior = e;
+        
+        printf("maior: %d", maior);
   
 
      return 0;
