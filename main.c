@@ -4,42 +4,21 @@
 
 int main () {
 
-  int a, b, c, d, e, menor, maior;
+ int idade;
+ float altura;
 
-    printf("Digite um numero para a: ");
-    scanf("%d", &a);
+printf("Bem-vindos ao brinquedo roleta da morte!");
+printf("\nQual sua idade? ");
+scanf("%d", &idade);
+printf("\nQual sua altura?");
+scanf("%f", &altura);
 
-    printf("digite um numero para b: ");
-    scanf("%d", &b);
-    
-    printf("digite um numero para c: ");
-    scanf("%d", &c);
+if((idade >= 18) && (altura >= 1.60)){
+printf("Voce pode brincar na roleta!");
+}else{
+  printf("Voce não pode brincar na roleta");
+}
 
-    printf("Digite um numero para d: ");
-    scanf("%d", &d);
+return 0;
 
-    printf("Digite um numero para e: ");
-    scanf("%d", &e);
-   
-   
-    menor = a;
-        
-        if(b < menor) menor = b;
-        if(c < menor) menor = c;
-        if(d < menor) menor = d;
-        if(e < menor) menor = e;
-        
-        printf("menor: %d", menor);
-    
-     maior = a;
-        
-        if(b > menor) maior = b;
-        if(c > menor) maior = c;
-        if(d > menor) maior = d;
-        if(e > menor) maior = e;
-        
-        printf("maior: %d", maior);
-  
-
-     return 0;
 }
