@@ -12,25 +12,31 @@ int main () {
     printf("Digite um número de 1 a 7: ");
     scanf("%d", &diaDaSemana);
 
-    if (diaDaSemana == 1){
-    printf("Domingo!");
-    }else if(diaDaSemana == 2){
-    printf("Segunda-feira!");
-    }else if(diaDaSemana == 3){
-      printf("Terça-Feira");
-    }else if(diaDaSemana == 4){
-      printf("Quarta-Feira");
-    }else if (diaDaSemana == 5){
-      printf ("Quinta-Feira");
-    }else if (diaDaSemana == 6){
-      printf("Sexta-Feira");
-    }else if (diaDaSemana == 7){
-      printf("Sábado");
-    }else{
-      printf("Valor invalido");
-    }   
-
-
+    switch(diaDaSemana){
+      case 1:
+        printf("Domingo");
+        break;
+      case 2:
+        printf("Segunda-Feira");
+        break;
+      case 3:
+        printf("Terça'Feira");
+        break;
+      case 4:
+        printf("Quarta-feira");
+        break;
+      case 5:
+        printf("Quinta-Feira");
+        break;
+      case 6:
+        printf("Sexta-Feira");
+        break;
+      case 7:
+        printf("Sábado");
+        break;
+      default:
+      printf("Número inválido!");
+      break; 
 return 0;
 
 }
