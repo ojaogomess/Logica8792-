@@ -7,36 +7,20 @@ int main () {
   SetConsoleCP(65001);
   SetConsoleOutputCP(65001);
 
-    int diaDaSemana;
+   int nota;
 
-    printf("Digite um número de 1 a 7: ");
-    scanf("%d", &diaDaSemana);
+  printf("Digite a nota");
+  scanf("%d", &nota);
 
-    switch(diaDaSemana){
-      case 1:
-        printf("Domingo");
-        break;
-      case 2:
-        printf("Segunda-Feira");
-        break;
-      case 3:
-        printf("Terça'Feira");
-        break;
-      case 4:
-        printf("Quarta-feira");
-        break;
-      case 5:
-        printf("Quinta-Feira");
-        break;
-      case 6:
-        printf("Sexta-Feira");
-        break;
-      case 7:
-        printf("Sábado");
-        break;
-      default:
-      printf("Número inválido!");
-      break; 
+  if (nota >= 7){
+    printf("Aprovado!");
+  }else if(nota >= 5){
+    printf("Recuperação!");
+  }else{
+    printf("Reprovado!");
+  }
+
+
 return 0;
 
 }
