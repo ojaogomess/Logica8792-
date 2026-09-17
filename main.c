@@ -13,7 +13,7 @@ scanf("%f %f %f", &a, &b, &c);
 
 if(a == b && b == c){
   printf("Equilátero");
-}else if(a == b || a == c || c){
+}else if(a == b || a == c || b == c){
   printf("Isóceles");
 }else{
   printf("Escaleno\n");
