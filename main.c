@@ -6,34 +6,53 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int opcao;
+int mes;
 
-printf("--- sistema de pedágio ---\n");
-printf("1 --- Moto ---\n");
-printf("2 --- Carro Passeio ---\n");
-printf("3 --- Caminhão ---\n");
-printf("4 --- Onibus ---\n");
-scanf("%d", &opcao);
+printf("Digite um valor (1-12)");
+scanf("%d", &mes);
 
-switch (opcao)
+switch (mes)
 {
-  case 1:
-  printf("Categoria: Moto | Tarifa: R$ 5,00\n");
+case 1:
+printf("Janeiro - Verão \n");
   break;
   case 2:
-  printf("categoria: Carro Passeio | Tarifa R$ 10,00\n");
+  printf("Fevereiro - Verão \n");
   break;
   case 3:
-  printf("Categoria: Caminhão | Tarifa: R$25,00\n");
+  printf("Março - Verão/Outono \n");
   break;
   case 4:
-  printf("Categoria Onibus | Tarifa R$30,00\n");
+  printf("Abril - Outono\n");
+  break;
+  case 5:
+  printf("Maio - Outono \n");
+  break;
+  case 6:
+  printf("Junho - Outono/Inverno  \n");
+  break;
+  case 7:
+  printf("Julho - Inverno \n");
+  break;
+  case 8:
+  printf("Agosto - Inverno \n");
+  break;
+  case 9:
+  printf("Setembro - Inverno/Primavera \n");
+  break;
+  case 10:
+  printf("Outubro - Primavera \n");
+  break;
+  case 11:
+  printf("Novembro - Primavera \n");
+  break;
+  case 12:
+  printf("Dezembro - Primavera/Verão\n");
   break;
   default:
-  printf("Erro: Categoria não adestrada no sistema.\n");
+  printf("Valor não permitido.\n");
   break;
 }
-
 
 
 return 0;
