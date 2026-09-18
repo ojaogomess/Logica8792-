@@ -13,45 +13,30 @@ scanf("%d", &mes);
 
 switch (mes)
 {
+case 12:
 case 1:
-printf("Janeiro - Verão \n");
+case 2:
+  printf("Verão");
   break;
-  case 2:
-  printf("Fevereiro - Verão \n");
+case 3:
+case 4:
+case 5:
+  printf("Outono");
   break;
-  case 3:
-  printf("Março - Verão/Outono \n");
+
+case 6:
+case 7:
+case 8:
+  printf("Inverno");
   break;
-  case 4:
-  printf("Abril - Outono\n");
-  break;
-  case 5:
-  printf("Maio - Outono \n");
-  break;
-  case 6:
-  printf("Junho - Outono/Inverno  \n");
-  break;
-  case 7:
-  printf("Julho - Inverno \n");
-  break;
-  case 8:
-  printf("Agosto - Inverno \n");
-  break;
-  case 9:
-  printf("Setembro - Inverno/Primavera \n");
-  break;
-  case 10:
-  printf("Outubro - Primavera \n");
-  break;
-  case 11:
-  printf("Novembro - Primavera \n");
-  break;
-  case 12:
-  printf("Dezembro - Primavera/Verão\n");
+
+case 9:
+case 10:
+case 11:
+  printf("Primavera");
   break;
   default:
-  printf("Valor não permitido.\n");
-  break;
+  printf("Valor Inválido");
 }
 
 
