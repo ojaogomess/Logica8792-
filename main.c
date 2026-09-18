@@ -1,24 +1,26 @@
 #include<stdio.h>
 #include<windows.h>
 
-int main () {
+int main(){
 
-  SetConsoleCP(65001);
-  SetConsoleOutputCP(65001);
+int opcao;
 
- float a, b, c;
+printf("--- sistema de pedágio ---");
+printf("1 - Moto");
+printf("2 - Carro Passeio\n");
+scanf("%d", &opcao);
 
- printf("Digite os três lados do triangulo: ");
-scanf("%f %f %f", &a, &b, &c);
-
-if(a == b && b == c){
-  printf("Equilátero");
-}else if(a == b || a == c || b == c){
-  printf("Isóceles");
-}else{
-  printf("Escaleno\n");
+switch (opcao)
+{
+  case 1:
+  printf("Categoria: Moto | Tarifa: R$ 5,00\n");
+  break;
+  case 2:
+  printf("categoria: Carro Passeio | Tarifa R$ 10,00\n");
+  default:
+  printf("Erro: Categoria não adestrada no sistema.\n");
+  break;
 }
-
 
 
 
