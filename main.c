@@ -7,19 +7,26 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 
-int n;
-printf("Digite um númmero: ");
-scanf("%d", &n);
+float peso, altura, imc;
 
-if(n % 3 == 0 && n % 5 == 0){
-  printf("Múltiplo de 3 e 5\n");
-}else if(n % 3 == 0){
-  printf("Múltiplo de 3");
-}else if(n % 5 == 0){
-  printf("Múltiplo de 5\n");
+printf("Digite a altura (m): ");
+scanf("%f", &altura);
+
+printf("Digite o peso (kg): ");
+scanf("%f", &peso);
+
+imc = peso / (altura * altura);
+
+if(imc < 18.5){
+  printf("Classificação: Abaixo do peso\n");
+}else if(imc < 25){
+  printf("Classificação: Peso normal!\n");
+}else if(imc < 30){
+  printf("Classificação: Acima do peso");
 }else{
-  printf("Não é múltiplo de 3 nem de 5");
+  printf("Classificação: Obesidade");
 }
+
 
 return 0;
 
