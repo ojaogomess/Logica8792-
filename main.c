@@ -6,15 +6,19 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char letra;
-printf("Digite uma letra: ");
-scanf("%c", &letra);
 
-if (letra == 'a' || letra == 'e' || letra == 'o' || letra == 'u' ||
-letra == 'A' || letra == 'E' || letra == 'I' || letra == 'O' || letra == 'U'){
-  printf("Vogal\n");
+int n;
+printf("Digite um númmero: ");
+scanf("%d", &n);
+
+if(n % 3 == 0 && n % 5 == 0){
+  printf("Múltiplo de 3 e 5\n");
+}else if(n % 3 == 0){
+  printf("Múltiplo de 3");
+}else if(n % 5 == 0){
+  printf("Múltiplo de 5\n");
 }else{
-  printf("Consoante\n");
+  printf("Não é múltiplo de 3 nem de 5");
 }
 
 return 0;
