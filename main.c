@@ -6,11 +6,11 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-char frutas[3][20] = {"Maçã\n", "Banana\n", "Laranja\n"};
+char nomes[3][20] = {"João\n", "Ana\n", "Melissa\n"};
 
-printf("%s", frutas[0]);
-printf("%s", frutas[1]);
-printf("%s", frutas[2]);
+printf("%s", nomes[0]);
+printf("%s", nomes[1]);
+printf("%s", nomes[2]);
 
 
 
