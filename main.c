@@ -9,8 +9,10 @@ SetConsoleOutputCP(65001);
 int numeros[3] = {1, 2, 3};
 
 numeros[0] = 10;
+numeros[1] = 20;
+numeros[2] = 30;
 
-printf("%d", numeros[0]);
+printf("%d", numeros[2]);
 
 
 
