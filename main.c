@@ -6,12 +6,20 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
+int soma = 0;
+int i;
 
 
+for(i = 1; i <= 5; i++){
+  //0 + 1
+  //1 + 2
+  //3 + 3
+  //6 + 4
+  //10 + 5
 
-for(float i = 100; i >= 1; i = i / 2){
-  printf("%.5f\n", i);
+  soma = soma + i;
 }
+
 
 
 return 0;
