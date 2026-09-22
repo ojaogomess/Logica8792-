@@ -6,11 +6,12 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numeros[3] = {1, 2, 3};
-int lenght = sizeof(numeros) / sizeof(numeros[0]);
+int x = 10;
+int *p = &x;
 
-
-printf("%d", lenght);
+printf("Valor de x: %d\n", x);
+printf("Endereço de x: %p\n", &x);
+printf("Valor via ponteiro: %d\n", *p);
 
 
 
