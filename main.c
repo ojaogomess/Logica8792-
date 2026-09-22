@@ -9,8 +9,8 @@ SetConsoleOutputCP(65001);
 
 
 
-for(int i = 20; i >= 0; i = i - 2){
-  printf("%d\n", i);
+for(float i = 100; i >= 1; i = i / 2){
+  printf("%.5f\n", i);
 }
 
 
