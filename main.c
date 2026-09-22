@@ -20,6 +20,7 @@ for(i = 1; i <= 5; i++){
   soma = soma + i;
 }
 
+printf("Soma é %d", soma);
 
 
 return 0;
