@@ -1,8 +1,9 @@
 #include<stdio.h>
 #include<windows.h>
 
-void dobrar(int *x){
-    *x = *x * 2;
+void saudar(){ //nao tem parametro ()
+    printf("Olá Mundo!\n");
+    printf("Tudo bem?\n");
 }
 
 
@@ -11,14 +12,7 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-
-int numero = 10;
-int n1 = 50;
-
-dobrar(&numero);
-printf("Número depois da função %d\n", numero);
-
-
+saudar();
 
 
 return 0;
