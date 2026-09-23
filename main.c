@@ -1,20 +1,30 @@
 #include<stdio.h>
 #include<windows.h>
-#include<math.h>
+
+
+int fatorial(int n){
+    int resultado = 1;
+    for(int i = 1; i <= n; i++){
+    resultado *= i;//resultado = resultado *i
+}
+    return resultado;
+
+
+}   
+
+
+
 int main(){
 
-SetConsoleCP(65001);
-SetConsoleOutputCP(65001);
-
-char nome[50];
-
-printf("Digite seu nome completo aqui: ");
-fgets(nome, sizeof(nome), stdin);
-
-printf("Olá %s", nome);
+    SetConsoleCP(65001);
+    SetConsoleOutputCP(65001);
 
 
+
+    int numero = 5;
+    printf("Fatorial de %d é %d\n", numero, fatorial(numero));
 
 
 return 0;
+
 }
