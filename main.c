@@ -20,8 +20,9 @@ int main(){
     SetConsoleOutputCP(65001);
 
 
-
-    int numero = 5;
+    int numero;
+    printf("Digite um número: ");
+    scanf("%d", &numero);
     printf("Fatorial de %d é %d\n", numero, fatorial(numero));
 
 
