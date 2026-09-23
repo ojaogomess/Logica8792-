@@ -16,9 +16,11 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    fibonacci(10);
-    
-tabuada(5);
+    int numero;
+
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+    tabuada(numero);
 
 return 0;
 
