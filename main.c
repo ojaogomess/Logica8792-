@@ -9,18 +9,18 @@ SetConsoleOutputCP(65001);
 int horas[12];
 int minutos[60];
 
-for(int i = 0; i < 12; i++){
-    horas[1] = i + 1;
+char nomes[3][60] ={
+    "João",
+    "Ana",
+    "Melissa"
+};
+
+
+int i;
+
+for(i = 0; i <= 3; i++){
+    printf("%s\n", nomes[i]);
 }
 
-for(int j = 0; j < 60; j++){
-    minutos[j] = j;
-}
-
-for(int i = 0; i < 12; i++){
-    for(int j = 0; j < 60; j++){
-        printf("Hora: %2d:%02d\n", horas [1], minutos[j]);
-    }
-}
 return 0;
 }
