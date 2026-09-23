@@ -1,26 +1,25 @@
 #include<stdio.h>
 #include<windows.h>
-
-
+#include<math.h>
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
-int horas[12];
-int minutos[60];
 
-char nomes[3][60] ={
-    "João",
-    "Ana",
-    "Melissa"
-};
+int numero;
+printf("Digite um número: ");
+scanf("%d", &numero);
+
+int quadrado = (int)pow(numero, 2);
+int cubo = (int)pow(numero, 3);
+
+printf("Quadrado de %d = %d\n", numero, quadrado);
+printf("Cubo de %d = %d", numero, cubo);
 
 
-int i;
 
-for(i = 0; i <= 3; i++){
-    printf("%s\n", nomes[i]);
-}
+
+
 
 return 0;
 }
