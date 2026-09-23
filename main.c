@@ -8,13 +8,11 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 int num[5] = {1, 2, 3, 4, 5};
 
-printf("%d", num[0]);
-printf("%d", num[1]);
+int i;
 
-
-
-
-
+for(i = 0; i < 5; i++){
+printf("%d Retornoooooo\n", i);
+}
 
 return 0;
 }
