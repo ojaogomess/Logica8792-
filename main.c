@@ -6,17 +6,12 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numero;
-printf("Digite um número: ");
-scanf("%d", &numero);
+char nome[50];
 
-int quadrado = (int)pow(numero, 2);
-int cubo = (int)pow(numero, 3);
+printf("Digite seu nome completo aqui: ");
+fgets(nome, sizeof(nome), stdin);
 
-printf("Quadrado de %d = %d\n", numero, quadrado);
-printf("Cubo de %d = %d", numero, cubo);
-
-
+printf("Olá %s", nome);
 
 
 
