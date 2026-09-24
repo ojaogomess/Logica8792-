@@ -1,13 +1,11 @@
 #include<stdio.h>
 #include<windows.h>
 
-
-int tabuada(int n){
-    int resultado;
-    printf("Tabuada do %d\n", n);
-    for(int i = 1; i <= 10; i++){
-        resultado = n * i;
-        printf("%d x %d = %d\n", n, i, resultado);
+void verificarEhParImpar (int n){
+    if(n % 2 == 0){
+    printf("%d é par!\n", n);
+}else{
+    printf("%d é impar\n", n);
     }
 }
 
@@ -18,9 +16,15 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int ultimo = tabuada(7);
-    printf("Ultimo valor da tabuada: %d\n", ultimo);
+int numero;
 
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+    verificarEhParImpar(numero);
+
+
+
+    
 return 0;
 
 }
