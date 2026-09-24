@@ -22,8 +22,11 @@ char palavra[20];
 printf("Digite uma palavra: ");
 scanf("%s", &palavra);
 
+
 contarVogais(palavra);
-    
+
+
+
 return 0;
 
 }
