@@ -6,21 +6,14 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
+int i;
 
-int numero, soma = 0;
-    
-    printf("Digite número para somar (0 encerra): ");
-    scanf("%d", &numero);
-
-    while(numero != 0){
-        soma += numero;
-        scanf("%d", &numero);
+while(i <= 50){
+    if(i % 2 == 1){
+        printf("%d\n", i);
     }
-    printf("Soma total = %d\n", soma);
-    
-
-
-
+    i++;
+}
 
 
 return 0;
