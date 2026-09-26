@@ -8,19 +8,57 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int n;
-float nota, soma = 0;
+int opcao;
+float a, b;
 
-printf("Quantos alunos tema  turma?: ");
-scanf("%d", &n);
+do{
+    printf("\n --MENU-- \n");
+    printf("1--Soma\n");
+    printf("2--Subtração\n");
+    printf("3--Multiplicação\n");
+    printf("4--Divisão\n");
+    printf("0--Sair\n");
+    printf("Escolha uma opção: ");
+    scanf("%d", &opcao);
 
-for(int i = 0; i < n; i++){ //enquanto i menor que n (tamanho da turma), continue adicionando i
-    printf("Digite a nota do aluno %d: \n", i + 1); //digite a nota pertencente a cada aluno, a cada novo aluno para adicionar nota, adicione +1, para demonstrar aluno 1, 2, 3. 4...
-    scanf("%f", &nota); //escaneia a nota e a guarda na váriavel nota
-    soma += nota; // soma mais a nota e guarda valor
-}
-printf("Média da turma: %.2f\n", soma / n); //após finalizar as notas com o tamanho da turma (n), mostrea média com float de duas casas decimais e soma dividido por tamanho da turma
+    switch (opcao){
+        case 1:
+        printf("Digite dois números: ");
+        scanf("%f %f", &a, &b);
+        printf("Resultado: %.2f", a + b);
+        break;
+        
+        case 2:
+        printf("Digite dois números: ");
+        scanf("%f %f", &a, &b);
+        printf("Resultado %.2f", a - b);
+        break;
 
+        case 3:
+        printf("Dígite dois números: ");
+        scanf("%f %f", &a, &b);
+        printf("Resultado: %.2f", a * b);
+        break;
+
+        case 4:
+        printf("Digite dois números: ");
+        scanf("%f %f", &a, &b);
+        if (b != 0)
+        printf("Resultado: %.2f", a / b);
+        else
+        printf("Erro: divisão por zero!");
+        break;
+
+        case 0:
+        printf("Saíndo...");
+        break;
+    default:
+    printf("Opcão Inválida\n");
+    break;
+
+    }
+
+    }while(opcao != 0);
 
 
 return 0;
