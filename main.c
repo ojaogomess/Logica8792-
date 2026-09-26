@@ -1,28 +1,27 @@
 #include<stdio.h>
 #include<windows.h>
 
-int ehPrimo(int n){
-    if(n < 2)return 0;
-    for(int i = 2; i < n; i++){
-        if(n % i == 0) return 0;
-    }
-    return 1;
-}
+
 
 int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int numero;
+int n, resto, invertido = 0;
 
 printf("Digite um número: ");
-scanf("%d", &numero);
+scanf("%d", &n);
 
-if(ehPrimo(numero))
-    printf("%d é primo\n", numero);
-    else
-    printf("%d não é primo\n", numero);
+int ultimo;
+
+while(n != 0){
+    resto = n % 10;
+    invertido = invertido * 10 + resto;
+    n /= 10;
+}
+       printf("Numero invertido: %d\n", invertido);
+
 
 
 return 0;
