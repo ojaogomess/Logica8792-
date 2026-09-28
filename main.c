@@ -7,22 +7,19 @@ int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
+int n;
 
-int contador = 0;
 
-for(int a = 0; a <= 9; a++){
-    for(int b = 0; b <= 9; b++){
-        for(int c = 0; c <= 9; c++){
-            for(int d = 0; d <= 9; d++){
-                contador++;
-                printf("OS possíveis resultados são: %d %d %d %d\n", a, b, c, d);
-            }
-        }
+printf("Digite o tamanho do quadrado(X x Y): ");
+scanf("%d", &n);
+
+
+for(int x = 1; x <= n; x++){
+    for(int y = 1; y <= n; y++){
+        printf("* ");
     }
+    printf("\n");
 }
-printf("O número total de interações: %d\n", contador);
-
-
 return 0;
 
 }
