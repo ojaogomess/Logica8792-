@@ -9,13 +9,17 @@ int main(){
     SetConsoleOutputCP(65001);
 
 
-for(int i = 1; i < 8; i++){
-    for(int j = 1; j < 8; j++){
-        printf("For externo e for interno: %d %d\n", i, j);
+
+
+
+    int i;
+
+    for(i = 0000; i <= 9999; i++){
+        printf("%d\n", i);
     }
-}
 
 
+printf("Numero de combinações possiveis: %d", i);
 
 
 
