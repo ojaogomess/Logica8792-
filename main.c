@@ -8,57 +8,21 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int opcao;
-float a, b;
+int n, resultado;
 
-do{
-    printf("\n --MENU-- \n");
-    printf("1--Soma\n");
-    printf("2--Subtração\n");
-    printf("3--Multiplicação\n");
-    printf("4--Divisão\n");
-    printf("0--Sair\n");
-    printf("Escolha uma opção: ");
-    scanf("%d", &opcao);
+printf("Digite um número: ");
+scanf("%d", &n);
 
-    switch (opcao){
-        case 1:
-        printf("Digite dois números: ");
-        scanf("%f %f", &a, &b);
-        printf("Resultado: %.2f", a + b);
-        break;
-        
-        case 2:
-        printf("Digite dois números: ");
-        scanf("%f %f", &a, &b);
-        printf("Resultado %.2f", a - b);
-        break;
-
-        case 3:
-        printf("Dígite dois números: ");
-        scanf("%f %f", &a, &b);
-        printf("Resultado: %.2f", a * b);
-        break;
-
-        case 4:
-        printf("Digite dois números: ");
-        scanf("%f %f", &a, &b);
-        if (b != 0)
-        printf("Resultado: %.2f", a / b);
-        else
-        printf("Erro: divisão por zero!");
-        break;
-
-        case 0:
-        printf("Saíndo...");
-        break;
-    default:
-    printf("Opcão Inválida\n");
-    break;
-
+for(int i = 1; i <= 10; i++){
+        for( int j = 1; j <= 10; j++){
+            printf("\n%d x %d = %d\n", i, j, i * j);
+        }
     }
 
-    }while(opcao != 0);
+
+
+
+
 
 
 return 0;
