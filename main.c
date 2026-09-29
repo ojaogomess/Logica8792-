@@ -7,19 +7,24 @@ int main(){
 
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
+
 int n;
-
-
-printf("Digite o tamanho do quadrado(X x Y): ");
+printf("Digite o tamanho do triangulo: ", &n);
 scanf("%d", &n);
 
-
-for(int x = 1; x <= n; x++){
-    for(int y = 1; y <= n; y++){
+for(int i = 1; i <= n; i++){
+    for(int j = 1; j <= i; j++){
         printf("* ");
     }
     printf("\n");
+    
 }
+
+
+
+
+
+
 return 0;
 
 }
