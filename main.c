@@ -8,30 +8,24 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int n, primo = 1;
+int n, contador = 0; //declara n e contador, iniciando contador com 0
 
-printf("Digite um número: "); //pede um numero ao usuario
-scanf("%d", &n); //usuario digita e numero evalor é armazenado na variavel n
-
-if (n < 2) // se n é menor que 2..
-    primo = 0; //ele não é primo (0 = condição falsa)
-else //(senão)
-    for(int i = 2; i < n; i++){ //para (introduz i), i = 2 e i menor que o valor de m (numero que usuario digitou, adiciona i de novo)
-        if(n % i == 0) // se n dividido por i igual a 0 sem resto
-        primo = 0; //não é primo
-        break; //para a ação
+printf("Digite o limite N: "); //pede para digitar limite N
+scanf("%d", &n); //le e escaneia o valor do limite e armazena em n
+for(int num = 2; num <= n; num++){ //para (introduz num) num menor que dois e enquanto num menor ou igual que n, num aumenta 1 a cada repetição
+    int primo = 1; //assume inicialmente que o número é primo
+    for(int i = 2; i < num; i++){ //começa i em 2 e testa todos os divisores até antes de num
+        if(num % i == 0){ //se quando num divide por i não sobra resto
+            primo = 0; //não é primo
+            break; //interrompe o laço atual
+        }
     }
-if(primo) //se é primo: mostra "é primo" ao usuario e com o valor que ele digitou
-    printf("%d é primo\n", n);
-else //senão
-    printf("%d não é primo", n); //se não for primo, n é mostrado com "Não é primo"
+    if(primo){ //se o número continuou marcado como primo, incrementa o contador
+        contador++;
 
-
-
-
-
-
-
+    }
+}
+printf("Quantidade de primos entre 1 e %d: %d\n", n, contador); //mostra a quantidade de números primos encontrados entre 1 e n
 
 
 return 0;
