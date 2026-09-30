@@ -8,18 +8,22 @@ int main(){
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int n = 8; //declara n com valor em 8
+    int n, limite; //declara n e limite
+    printf("Digite o limite: "); //pede pro usuario digitar limite
+    scanf("%d", &limite);  //digitado o valor para limite, sistema escaneia e guarada valor na variavel limite
 
-    for(int i = 0; i < n; i++){ //para (declara i em 0), enquanto i menor que n, a cada repetição, i adiciona um
-        for(int j = 0; j < n; j++){ //e para (declara j em 0) enquanto j menor que n, j adiciona 1 a cada volta
-            if((i + j) % 2 == 0){ //se a soma de i e j for divisível por 2 e não sobrar restp
-                printf("[ ]"); //mostre []
-            }else{ // senao, mostre [#]
-                printf("[#]");
-            }
+for(int n = 1; n <= limite; n++){ //para (declara n em um), enquanto n menor ou igual a limite, adicione 1 a cada repetição de n
+    int soma = 0; //declara soma como 0 (falso ou só valor 0 mesmo?)
+    for(int i = 1; i < n; i++){ //para (declara i em um) i menor que n, i adiciona um a cada volta
+        if(n % i == 0){ //SE divisão com n e i não sobrar resto
+            soma += i; //soma (igual e armazena?) a i
         }
-        printf("\n"); //quebra a linha após terminar uma linha inteira da matriz
     }
+    if (soma == n & n != 0){ //se soma igual a n e n diferente de 0...
+        printf("%d é um número perfeito\n", n); //mostre (n) é um numero perfeito
+
+    }
+}
 
 return 0;
 
