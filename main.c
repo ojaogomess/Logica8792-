@@ -5,26 +5,28 @@
 
 int main(){
 
-    SetConsoleCP(65001);
-    SetConsoleOutputCP(65001);
+SetConsoleCP(65001);
+SetConsoleOutputCP(65001);
 
-    int n;
-    printf("Digite o tamanho do vetor: "); 
-    scanf("%d", &n);
+int n;
 
-    int v[n]; //declara vetor inteiro com armazenamento a depender do valor do n que o usuario digitar
-    int soma = 0; //soma começa em 0
-    for(int i = 0; i < n; i++){ //declara i em 0, enquanto i menor que o valor que o usuario selecionar paara o vetor (n), i soma 1 em cada volta 
-        printf("Digite o valor %d: ", i + 1);  //pede ao usuário um valor para armazenar na posição atual do vetor
-        scanf("%d", &v[i]); //escaneia o vetor com o armazenamento que o i determinou (valores que o usuario colocou em cada "gaveta")
-        soma += v[i]; //soma igual a soma mais v e i (numeros selecionados no vetor)
-    }
-    printf("Soma: %d\n", soma); // soma resultante 
-    printf("Média: %.2f\n", (float)soma/n); //média entre todos os valores do vetor
+   printf("Digite o tamanho do vetor: ");
+   scanf("%d", &n);
 
+int v[n];
+   for(int i = 0; i < n; i++){ //cria i começando em 0, repete enquanto i for menor que n, e aumenta 1 a cada repetição
+      printf("Digite o valor %d: ", i + 1); //mostra pra digitar o valor e em seguida i soma um para que se possa armazenar em diferentes valores de vetores
+      scanf("%d", &v[i]); // escaneia o valor que o usuario inseriu o guarda e o guarda em v[i]
+   }
 
+   int maior = v[0], menor = v[0]; //declara maior e menor com valor em v com 0 "gavetas iniciais"
+   for(int i = 1; i < n; i++){ //para (delcara i, enquanto i menor que n (valor que usuario digitar), i soma 1 a cada volta)
+      if(v[i] > maior) maior = v[i]; // se vetor com i gavetas é maior que "maior", então maior é o vetor em i 
+      if(v[i] < menor) menor = v[i]; ///mesma coisa mas com menor
 
-
+   }
+   printf("Maior: %d\n", maior);
+   printf("Menor: %d\n", menor);
 
 return 0;
 
