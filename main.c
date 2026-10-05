@@ -12,8 +12,25 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-printf("O nome é: %s\n", retornarNOme("João"));
+int voto;
 
+printf("Digite um número para seguir a votação: ");
+scanf("%d", &voto);
+
+if(voto == 20){
+   printf("Carla");
+}else if(voto == 10){
+   printf("Manoel");
+}else if(voto == 30){
+   printf("Bianca");
+}else if(voto == 40){
+   printf("Henrique");
+}else if(voto == 50){
+   printf("Bruno");
+}
+else{
+   printf("Inválido");
+}
 
 return 0;
 
