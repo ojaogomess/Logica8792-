@@ -2,16 +2,18 @@
 #include<windows.h>
 
 
-void saudação(){
-   printf("Seja bem vindo!");
+char* saudacao(){
+   return "Olá, seja bem vindo(a)!";
 }
+
 
 int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-saudação();
+printf("%s\n", saudacao());
+
 
 return 0;
 
