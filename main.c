@@ -2,8 +2,8 @@
 #include<windows.h>
 
 
-char* saudacao(){
-   return "Olá, seja bem vindo(a)!";
+char* retornarNOme(char nome[]){
+   return nome;
 }
 
 
@@ -12,7 +12,7 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-printf("%s\n", saudacao());
+printf("O nome é: %s\n", retornarNOme("João"));
 
 
 return 0;
