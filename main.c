@@ -23,7 +23,9 @@ void resultado(){
    printf("Canditato B: %d votos\n", votosB);
    printf("Nulos: %d votos\n", votosNulos);
 
-   if(votosA > votosB){
+   if(votosA == 0 && votosB == 0 && votosNulos > 0){
+         printf("Todos os votos foram nulos. Não houve vencedor.\n");
+   }else if(votosA > votosB){
       printf("Vencedor da votação: Canditado A!");
    }else if(votosA < votosB){
       printf("Vencedor da votação: Canditado B!");
@@ -50,5 +52,4 @@ for(int i = 0; i < totalEleitores; i++ ){
 resultado();
 
 return 0;
-
 }
