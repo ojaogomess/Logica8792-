@@ -10,24 +10,17 @@ SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
 int n;
-printf("Digite o tamanho do vetor: ");
+printf("Quantos nomes deseja digitar? ");
 scanf("%d", &n);
-float v[n], soma = 0, media, somaDesvios = 0;
+char nomes [n][50];
 for(int i = 0; i < n; i++){
-    printf("Digite o valor %d: ", i + 1);
-    scanf("%f", &v[i]);
-    soma += v[i];
-
+    printf("Digite o nome %d: ", i + 1);
+    scanf("%s", nomes[i]);
 }
 
-media = soma / n;
-for(int i = 0; i < n; i++){
-    somaDesvios += (v[i] - media) * (v[i] - media);
-}
-float desvioPadrao = sqrt(somaDesvios / n);
-printf("Média: %.2f\n", media);
-printf("Desvio padrão: %.2f\n", desvioPadrao);
+
 
 
 return 0;
+
 }
