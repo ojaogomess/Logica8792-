@@ -9,23 +9,27 @@ int main(){
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
 
-int numero;
-int sucesso;
+int n;
 
+printf("Digite o tamanho dos vetores: ");
+scanf("%d", &n);
 
-do{
-   printf("Digite um número maior que 0: ");
-   sucesso = scanf("%d", &numero);
-
-   if (sucesso != 1){
-      printf("Entrada inválida Digite apenas números inteiros.\n");
-      while(getchar() != '\n');
-   }
-
-}while(numero <= 0);
-
-printf("Você digitou %d, que é válido!\n", numero);
-
-
+int a[n], b[n], soma[n];
+printf("Digite os valores do vetor A:\n");
+for(int i = 0; i < n; i++){
+    scanf("%d", &a[i]);
+}
+printf("Digite os valores do vetor B:\n");
+    for (int i = 0; i < n; i++){
+        scanf("%d", &b[i]);
+    }
+    for(int i = 0; i < n; i++){
+        soma[i] = a[i] + b[i]; 
+    }
+    printf("Vetor soma:\n");
+    for(int i = 0; i < n; i++){
+        printf("%d\n", soma[i]);
+    }
+    printf("\n");
 return 0;
 }
