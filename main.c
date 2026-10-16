@@ -19,21 +19,8 @@ printf("\n");
 
 struct Pessoa p1;
 
-printf("Qual seu nome?\n");
-scanf("%s", &p1.nome);
-
-printf("Sua idade?\n");
-scanf("%d", &p1.idade);
-
-printf("Sua altura?\n");
-scanf("%f", &p1.altura);
-
-printf("E seu peso?\n");
-scanf("%f", &p1.peso);
-
-printf("Nome: %s | idade: %d | altura: %f | peso: %f", p1.nome, p1.idade, p1.altura, p1.peso);
-
-
+printf("Digite o nome completo");
+fgets(p1.nome, sizeof(p1.nome), stdin);
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
