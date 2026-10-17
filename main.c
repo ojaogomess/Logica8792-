@@ -22,14 +22,9 @@ printf("digite N: ");
 scanf("%d", &n);
 
 for(int i = 1; i <= n; i++){
-    printf("%d\n", i);
-}
-
-printf("\n");
-
-printf("Soma: \n");
-for(int i = 0; i <= n; i++){
-    printf("Soma de n: %d + %d = %d\n", n, i, n + i);
+    soma += i;
+    soma -= 1;
+    printf("O resultado %d + %d = %d\n", soma, i, soma + i);
 }
 return 0;
 
