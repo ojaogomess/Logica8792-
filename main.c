@@ -8,12 +8,19 @@ int main(){
 
 SetConsoleCP(65001);
 SetConsoleOutputCP(65001);
+ 
+ int n;
 
-int portaAberta = 0;
-if(!portaAberta){ //not = !
-    printf("A porta está fechada!\n");
-}
+ do{
+    printf("Digite um número nao negativo: ");
+    scanf("%d", &n);
+}while(n < 0);
 
-return 0;
+    printf("Você digitou: %d\n", n);
 
+    return 0;
+
+
+   
+    return 0;
 }
