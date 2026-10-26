@@ -1,58 +1,52 @@
 #include <stdio.h>
 #include <windows.h>
+#include<stdlib.h>
+#include<time.h>
+
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    const int DIAS = 7;
-    float temp[DIAS];
-    float soma = 0, media;
-    float maior, menor;
-    int diaMaior = 1, diaMenor = 1;
-    int acimaMedia = 0;
+const int MAX_TENTAIVAS = 7;
+int tentativas[MAX_TENTAIVAS];
+int secreto, palpite;
 
-    // Entrada das temperaturas
-    for (int i = 0; i < DIAS; i++) {
-        printf("Digite a temperatura do dia %d: ", i + 1);
-        scanf("%f", &temp[i]);
+int usadas = 0, acertou = 0;
 
-        soma += temp[i];
+srand(time(NULL));
+secreto = rand() % 100 + 1;
+printf("Advinhe o número entre 1 e 100: \n");
+printf("Você tem %d tentativas \n", MAX_TENTAIVAS);
 
-        // Inicializa maior e menor com o primeiro valor
-        if (i == 0) {
-            maior = menor = temp[i];
+do{
+    printf("\nTentativa %d: ", usadas + 1);
+    scanf("%d", &palpite);
+        if(palpite < 1 || palpite > 100){
+            printf("Digite um número entre 1 a 100!");
+        }else{
+        tentativas[usadas] = palpite;
+        usadas++;
+        if(palpite == secreto){
+            acertou = 1;
+          
+        }else if(palpite < secreto){
+            printf("O número secreto é MAIOR!\n");
+        }else{
+            printf("O número secreto é MENOR!\n");
         }
-
-        if (temp[i] > maior) {
-            maior = temp[i];
-            diaMaior = i + 1;
         }
-
-        if (temp[i] < menor) {
-            menor = temp[i];
-            diaMenor = i + 1;
-        }
-    }
-
-    media = soma / DIAS;
-
-    for (int i = 0; i < DIAS; i++) {
-        if (temp[i] > media) {
-            acimaMedia++;
-        }
-    }
-
-    printf("\n--- TEMPERATURAS ---\n");
-
-    for (int i = 0; i < DIAS; i++) {
-        printf("Dia %d: %.1f°C\n", i + 1, temp[i]);
-    }
-
-    printf("\nMedia da semana: %.1f°C\n", media);
-    printf("Maior temperatura: %.1f°C (dia %d)\n", maior, diaMaior);
-    printf("Menor temperatura: %.1f°C (dia %d)\n", menor, diaMenor);
-    printf("Dias acima da media: %d\n", acimaMedia);
+}while(!acertou && usadas < MAX_TENTAIVAS);
+printf("\n--- FIM DO JOGO ---\n");
+if(acertou){
+    printf("Parabéns. Você acertou o número secreto em %d tentativas(s)\n", usadas);
+}else{
+    printf("Suas tentativas acabaram. O número era %d. \n", secreto);
+}
+ printf("Histórico de palpites: \n");
+ for(int i = 0; i < usadas; i++){
+    printf("%d) %d\n", i + 1, tentativas[i]);
+ }
 
     return 0;
 }
