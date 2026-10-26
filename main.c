@@ -8,45 +8,23 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-const int MAX_TENTAIVAS = 7;
-int tentativas[MAX_TENTAIVAS];
-int secreto, palpite;
-
-int usadas = 0, acertou = 0;
-
-srand(time(NULL));
-secreto = rand() % 100 + 1;
-printf("Advinhe o número entre 1 e 100: \n");
-printf("Você tem %d tentativas \n", MAX_TENTAIVAS);
-
-do{
-    printf("\nTentativa %d: ", usadas + 1);
-    scanf("%d", &palpite);
-        if(palpite < 1 || palpite > 100){
-            printf("Digite um número entre 1 a 100!");
-        }else{
-        tentativas[usadas] = palpite;
-        usadas++;
-        if(palpite == secreto){
-            acertou = 1;
-          
-        }else if(palpite < secreto){
-            printf("O número secreto é MAIOR!\n");
-        }else{
-            printf("O número secreto é MENOR!\n");
+    const int LANCAMENTOS = 10;
+    int dados[LANCAMENTOS];
+    int soma = 0;
+    int seis = 0;
+    srand(time(NULL));
+    for(int i = 0; i < LANCAMENTOS; i++){
+        dados[i] = rand() % 6 + 1;
+        soma += dados[i];
+        if(dados[i] == 6){
+            seis++;
         }
-        }
-}while(!acertou && usadas < MAX_TENTAIVAS);
-printf("\n--- FIM DO JOGO ---\n");
-if(acertou){
-    printf("Parabéns. Você acertou o número secreto em %d tentativas(s)\n", usadas);
-}else{
-    printf("Suas tentativas acabaram. O número era %d. \n", secreto);
+    }
+printf("Resultados dos lançamentos:\n");
+for(int i = 0; i < LANCAMENTOS; i++){
+    printf("Lançamento %d: %d\n", i + 1, dados[i]);
 }
- printf("Histórico de palpites: \n");
- for(int i = 0; i < usadas; i++){
-    printf("%d) %d\n", i + 1, tentativas[i]);
- }
-
+printf("\nSoma: %d\n", soma);
+printf("Quantidade de vezes que saiu 6: %d\n", seis);
     return 0;
 }
