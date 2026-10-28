@@ -3,21 +3,20 @@
 #include<stdlib.h>
 #include<time.h>
 
-void linha(){
-    printf("----------------\n");
+
+void mostrarNumeros(int numero){
+    printf("Número: %d\n", numero);    
 }
-
-
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-linha();
-printf("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
-linha();
-
     
+
+mostrarNumeros(999);
+
+
     
     return 0;
     }
