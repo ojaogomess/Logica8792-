@@ -4,8 +4,8 @@
 #include<time.h>
 
 
-void mostrarNumeros(int numero){
-    printf("Número: %d\n", numero);    
+void somar(int a, int b){
+    printf("Soma = %d\n", a + b);
 }
 
 int main() {
@@ -13,8 +13,7 @@ int main() {
     SetConsoleOutputCP(65001);
 
     
-
-mostrarNumeros(999);
+somar(40, 10);
 
 
     
