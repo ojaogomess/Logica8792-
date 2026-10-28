@@ -4,28 +4,51 @@
 #include<time.h>
 
 
+
+
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-int cartela[5] = {3, 8 , 12, 15, 10};
-int sorteado[21] = {0};
-int acertos = 0, rodadas = 0, bola;
-srand(time(NULL));
-while(acertos < 5){
-    do{
-        bola = rand() % 20 + 1;
-    }while(sorteado[bola]);
-    sorteado[bola] = 1;
-    rodadas++;
-    printf("Bola %d: %d\n", rodadas, bola);
-    for(int i = 0; i < 5; i++){
-        if(cartela[i] == bola){
-            acertos++;
-            printf("Acertou o %d! (%d de 5)\n", bola, acertos);
-        }
+int opcao;
+char placa[20] = "";
+
+do{
+    printf("\n--SISTEMA DE PLACAS --\n");
+    printf("1 -  Resgistrar placa \n");
+    printf("2 - Ver placa registrada\n");
+    printf("3 - Sair\n");
+    scanf("%d", &opcao);
+
+    switch(opcao){
+        case 1:
+            printf("Digite a placa do veículo: \n");
+            scanf("%s", placa);
+            printf("Placa registrada com sucesso!\n");
+            break;
+
+        case 2:
+            if(strlen(placa) == 0){
+                printf("Nenhuma placa registrada: \n");
+
+            }else{
+                printf("Placa registrada: %s\n", placa);
+            }
+            break;
+
+        case 3:
+            printf("Saindo do sistema...\n");
+            break;
+        default:
+        printf("Opção inválida!\n");
+
     }
-}
+
+
+}while(opcao != 3);
+
+
 
     return 0;
-}
+    }
+
