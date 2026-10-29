@@ -4,12 +4,8 @@
 #include<time.h>
 
 
-void somar(int a, int b){
-    printf("Soma = %d\n", a + b);
-}
-
-int soma(int x, int y){
-    return x + y;
+int dobro(int numero){
+    return numero * 2;
 }
 
 int main() {
@@ -17,11 +13,8 @@ int main() {
     SetConsoleOutputCP(65001);
 
     
-int resultado = soma(100, 100);
-
-    printf("O resultado da soma é: %d\n", resultado);
-    
-
+int valor = 10;
+printf("Dobro = %d\n", dobro(valor));
 
     
     return 0;
