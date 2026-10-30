@@ -3,23 +3,19 @@
 #include<stdlib.h>
 #include<time.h>
 
-void linha(int n){
-    for(int i = 0; i < n; i++){
-        printf("-");
-        printf("\n");
-    }
-
+#define PI 3.14259
+float area_circulo(float raio){
+    return PI * raio * raio;
 }
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-linha(10);
-printf("Bem vindo ao sistema\n");
-linha(10);
-
-
+    float r;
+    printf("Raio: \n");
+    scanf("%f", &r);
+    printf("Área: %.2f\n", area_circulo);
 
     return 0;
     }
