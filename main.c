@@ -3,19 +3,25 @@
 #include<stdlib.h>
 #include<time.h>
 
-#define PI 3.14259
-float area_circulo(float raio){
-    return PI * raio * raio;
+int maior(int a, int b){
+    if(a > b) return a;
+    return b;
+}
+
+int maior1(int a, int b, int c){
+    return maior(maior(a, b), c);
 }
 
 int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    float r;
-    printf("Raio: \n");
-    scanf("%f", &r);
-    printf("Área: %.2f\n", area_circulo);
+    int x, y, z;
+
+    printf("Três números: \n");
+    scanf("%d %d %d", &x, &y, &z);
+    printf("Maior: %d\n", maior1(x, y, z));
+
 
     return 0;
     }
