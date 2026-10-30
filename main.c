@@ -9,16 +9,25 @@ int main() {
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 
-    int vet[10];
-    for(int i = 0; i < 10; i++){
-        printf("Valor %d: ", i + 1);
-        scanf("%d", &vet[i]);
+int m[3][3];
+int maior, linhaMaior = 0, colunaMaior = 0;
+for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 3; j++){
+        printf("Elemento [%d][%d]: ", i + 1, j + 1);
+        scanf("%d", &m[i][j]);
     }
-    printf("\nVetor: \n");
-    for(int i = 0; i < 10; i++){
-        printf("%d", vet[i]);
-        printf("\n");
+}for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 3; j++){
+        if(m[i][j] > maior){
+            maior = m[i][j];
+            linhaMaior = i;
+            colunaMaior = j;
+        }
     }
+}
+printf("Maior elemento: %d\n", maior);
+printf("Posição: linha %d, coluna %d\n", linhaMaior, colunaMaior);
+
 
 
     return 0;
